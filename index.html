@@ -42,23 +42,16 @@
       align-items:start;
     }
 
-    .sidebar{
-      position:sticky;
-      top:18px;
-    }
-
-    .card{
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      background:#fff;
-      padding:14px;
-    }
-
-    .card img{
+    .profile-photo{
       width:100%;
       border-radius:12px;
       display:block;
+    }
+
+    
+    .sidebar{
+      position:sticky;
+      top:18px;
     }
 
     h1{
@@ -142,11 +135,12 @@
 <body>
 <main class="page">
 
-  <aside class="sidebar">
-    <div class="card">
-      <img src="https://fagonza4.github.io/me.jpeg" alt="Felipe González">
-    </div>
-  </aside>
+<aside class="sidebar">
+  <img class="profile-photo"
+       src="https://fagonza4.github.io/me.jpeg"
+       alt="Felipe González">
+</aside>
+
 
   <section>
     <h1>Felipe González</h1>
