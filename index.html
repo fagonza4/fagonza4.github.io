@@ -1,362 +1,405 @@
 <!DOCTYPE html>
-<html>
-
-<!-- Head -->
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Felipe González</title>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --text:#111827;
+      --muted:#4b5563;
+      --border:#e5e7eb;
+      --link:#0f766e;
+      --link-hover:#115e59;
+      --chip:#f3f4f6;
+      --shadow:0 8px 24px rgba(0,0,0,.07);
+      --radius:16px;
+      --max:980px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      line-height:1.55;
+      background:#fff;
+    }
+
+    .page{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 60px;
+      display:grid;
+      grid-template-columns:240px 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .sidebar{
+      position:sticky;
+      top:18px;
+    }
+
+    .card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      background:#fff;
+      padding:14px;
+    }
+
+    .card img{
+      width:100%;
+      border-radius:12px;
+      display:block;
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:34px;
+      letter-spacing:-0.02em;
+      line-height:1.15;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .chip{
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--chip);
+      text-decoration:none;
+      font-size:14px;
+      font-weight:500;
+      color:var(--text);
+    }
+
+    .chip:hover{
+      background:#eef2f7;
+    }
+
+    a{
+      color:var(--link);
+      text-decoration:none;
+    }
+
+    a:hover{
+      color:var(--link-hover);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    h2{
+      font-size:18px;
+      margin:28px 0 10px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+    }
+
+    ol{
+      padding-left:20px;
+      margin:0;
+    }
+
+    li{
+      margin:14px 0;
+    }
+
+    .meta{
+      color:var(--muted);
+    }
+
+    .small-links a{
+      font-size:14px;
+      font-weight:500;
+    }
+
+    @media(max-width:780px){
+      .page{grid-template-columns:1fr}
+      .sidebar{position:static}
+      h1{font-size:30px}
+    }
+  </style>
 </head>
 
-
 <body>
+<main class="page">
 
-<!-- Style -->
-<style>
+  <aside class="sidebar">
+    <div class="card">
+      <img src="https://fagonza4.github.io/me.jpeg" alt="Felipe González">
+    </div>
+  </aside>
 
-body{font-family: Arial, sans-serif; 
-	font-size:16px;
-	line-height: 1.4;}
+  <section>
+    <h1>Felipe González</h1>
+    <p class="subtitle">
+      Professor of Economics, King's College London<br>
+      Ph.D. Economics UC Berkeley<br>
+      Research areas: Political Economy, Development Economics, Public Economics, Economic History, Public Policy
+    </p>
 
-li{margin: 15px 0;}
-	
-/* creates two boxes */
-#left {
-        float:left;
-        width:20%;
-        position:fixed;
-        background-color:#FFFFFF;
-}
-#center {
-        float:left;
-        width:100%;
-        max-width:initial; 
-        background-color:#FFFFFF;
-}
-#right {
-        float:right;
-        width:79%;
-        background-color:#FFFFFF;
-}
-</style>
+    <div class="links">
+      <a class="chip" href="https://fagonza4.github.io/CV.pdf">cv</a>
+      <a class="chip" href="https://scholar.google.com/citations?user=dwxwyqwAAAAJ">gscholar</a>
+      <a class="chip" href="https://fagonza4.github.io/media">media</a>
+    </div>
 
-<!-- Header -->
+    <h2>Journal Articles</h2>
+    <ol>
+      <li>
+        <a href="https://fagonza4.github.io/lucy.pdf">Empowerment or indoctrination? Female training programs under dictatorship</a><br>
+        <span class="meta">with Mounu Prem and Cristine von Dessauer.<br><i>Journal of Economic History</i>, forthcoming.</span>
+      </li>
 
-<div id="center">
+      <li>
+        <a href="https://fagonza4.github.io/roads.pdf">The dark side of infrastructure: Roads, repression, and land in authoritarian Paraguay</a><br>
+        <span class="meta">with Josepa Miquel-Florensa, Mounu Prem, and Stéphane Straub.<br><i>Economic Journal</i>, 135:653–669, 2025.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/roads_app.pdf">Online appendix</a></span>
+      </li>
 
+      <li>
+        <a href="https://fagonza4.github.io/psb.pdf">Efficiency of bus priority infrastructure</a><br>
+        <span class="meta">with Hugo Silva.<br><i>Journal of Urban Economics</i>, 146:103751, 2025.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/psb_app.pdf">Online appendix</a></span>
+      </li>
 
-<div id="left">
- <br>
-<img src="https://fagonza4.github.io/me.jpeg" width="90%" height="auto"><br>
-</div>
+      <li>
+        <a href="https://fagonza4.github.io/missing.pdf">Dictatorship, higher education, and social mobility</a><br>
+        <span class="meta">with María Angélica Bautista, Luis Martínez, Pablo Muñoz, and Mounu Prem.<br><i>Journal of Historical Political Economy</i>, 4(4):509–545, 2025.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/missing_app.pdf">Online appendix</a></span>
+      </li>
 
+      <li>
+        <a href="https://fagonza4.github.io/mortality.pdf">Higher education and mortality: Legacies of an authoritarian college contraction</a><br>
+        <span class="meta">with Luis Martínez, Pablo Muñoz, and Mounu Prem.<br><i>Journal of the European Economic Association</i>, 22(4):1762–1797, 2024.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/mortality_app.pdf">Online appendix</a></span>
+      </li>
 
-<div id="right">
-<h1>Felipe González</h1>
-Professor of Economics, King's College London <br>
-Ph.D. Economics UC Berkeley <br>
-Research areas: Political Economy, Development Economics, Public Economics, Economic History, Public Policy <br>
-&nbsp <br>
-<a href="https://fagonza4.github.io/CV.pdf">cv</a>&nbsp;
-<a href="https://scholar.google.com/citations?user=dwxwyqwAAAAJ">gscholar</a>&nbsp;
-<a href="https://fagonza4.github.io/media">media</a>
+      <li>
+        <a href="https://fagonza4.github.io/fpop.pdf">The economics of the public option: Evidence from local pharmaceutical markets</a><br>
+        <span class="meta">with Juan Pablo Atal, José Ignacio Cuesta, and Cristóbal Otero.<br><i>American Economic Review</i>, 114(3):615–644, 2024.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/fpop_app.pdf">Online appendix</a></span>
+      </li>
 
+      <li>
+        <a href="https://fagonza4.github.io/police.pdf">Police violence, student protests, and educational performance</a><br>
+        <span class="meta">with Mounu Prem.<br><i>Review of Economics and Statistics</i>, 106(3):712–727, 2024.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/police_app.pdf">Online appendix</a></span>
+      </li>
 
-<!-- Journal Articles -->
-<h2>Journal Articles</h2>
-<ol>
+      <li>
+        <a href="https://fagonza4.github.io/nixon.pdf">The limits of hegemony: U.S. banks and Chilean firms in the Cold War</a><br>
+        <span class="meta">with Felipe Aldunate and Mounu Prem.<br><i>Journal of Development Economics</i>, 166:103212, 2024.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/nixon_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/lucy.pdf">
-Empowerment or indoctrination? Female training programs under dictatorship</a><br>
-with Mounu Prem and Cristine von Dessauer.<br>
-<i>Journal of Economic History</i>, forthcoming.
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/children.pdf">The intergenerational transmission of higher education: Evidence from the 1973 coup in Chile</a><br>
+        <span class="meta">with María Angélica Bautista, Luis Martínez, Pablo Muñoz, and Mounu Prem.<br><i>Explorations in Economic History</i>, 90:101540, 2023.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/children_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/roads.pdf">
-The dark side of infrastructure: Roads, repression, and land in authoritarian Paraguay</a><br>
-with Josepa Miquel-Florensa, Mounu Prem, and Stéphane Straub. <br>
-<i>Economic Journal</i>, 135:653-669, 2025.
-<a href="http://fagonza4.github.io/roads_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/repression.pdf">The geography of repression and opposition to autocracy</a><br>
+        <span class="meta">with María Angélica Bautista, Luis Martínez, Pablo Muñoz, and Mounu Prem.<br><i>American Journal of Political Science</i>, 67(1):101–118, 2023.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/repression_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/psb.pdf">
-Efficiency of bus priority infrastructure</a><br>
-with Hugo Silva. <br>
-<i>Journal of Urban Economics</i>, 146:103751, 2025.
-<a href="http://fagonza4.github.io/psb_app.pdf">Online appendix</a>
-</li>
-	
-<li><a href="https://fagonza4.github.io/missing.pdf">
-Dictatorship, higher education, and social mobility</a><br>
-with María Angélica Bautista, Luis Martínez, Pablo Muñoz, and Mounu Prem.<br>
-<i>Journal of Historical Political Economy</i>, 4(4):509-545, 2025.
-<a href="http://fagonza4.github.io/missing_app.pdf">Online appendix</a>
-</li>        
-        
-<li><a href="https://fagonza4.github.io/mortality.pdf">
-Higher education and mortality: Legacies of an authoritarian college contraction</a><br>
-with Luis Martínez, Pablo Muñoz, and Mounu Prem<br> 
-<i>Journal of the European Economic Association</i>, 22(4):1762-1797, 2024.
-<a href="http://fagonza4.github.io/mortality_app.pdf">Online appendix</a>
-</li>
-	
-<li><a href="https://fagonza4.github.io/fpop.pdf">
-The economics of the public option: Evidence from local pharmaceutical markets</a><br>
-with Juan Pablo Atal, José Ignacio Cuesta, and Cristóbal Otero.<br>
-<i>American Economic Review</i>, 114(3):615-644, 2024.
-<a href="http://fagonza4.github.io/fpop_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/mayors.pdf">Lost in transition? The persistence of dictatorship mayors</a><br>
+        <span class="meta">with Pablo Muñoz and Mounu Prem.<br><i>Journal of Development Economics</i>, 151:102669, 2021.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/mayors_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/police.pdf">
-Police violence, student protests, and educational performance</a><br>
-with Mounu Prem<br>
-<i>Review of Economics and Statistics</i>, 106(3):712-727, 2024.
-<a href="http://fagonza4.github.io/police_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/allende.pdf">Collective action and policy implementation: Evidence from Salvador Allende's expropriations</a><br>
+        <span class="meta">with Felipe Vial.<br><i>Journal of Economic History</i>, 81(2):405–440, 2021.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/allende_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/nixon.pdf">
-The limits of hegemony: U.S. banks and Chilean firms in the Cold War</a><br>
-with Felipe Aldunate and Mounu Prem<br> 
-<i>Journal of Development Economics</i>, 166:103212, 2024.
-<a href="http://fagonza4.github.io/nixon_app.pdf">Online appendix</a>
-</li>
-	
-<li><a href="https://fagonza4.github.io/children.pdf">
-The intergenerational transmission of higher education: Evidence from the 1973 coup in Chile</a><br>
-with María Angélica Bautista, Luis Martínez, Pablo Muñoz, and Mounu Prem<br>
-<i>Explorations in Economic History</i>, 90:101540, 2023.
-<a href="http://fagonza4.github.io/children_app.pdf">Online appendix</a>
-</li>
-	
-<li><a href="https://fagonza4.github.io/repression.pdf">
-The geography of repression and opposition to autocracy</a><br>
-with María Angélica Bautista, Luis Martínez, Pablo Muñoz, and Mounu Prem<br>
-<i>American Journal of Political Science</i>, 67(1):101-118, 2023.
-<a href="http://fagonza4.github.io/repression_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/distortions.pdf">Distorted quality signals in school markets</a><br>
+        <span class="meta">with José Ignacio Cuesta and Cristián Larroulet Philippi.<br><i>Journal of Development Economics</i>, 147:102532, 2020.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/distortions_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/mayors.pdf">
-Lost in transition? The persistence of dictatorship mayors</a><br>
-with Pablo Muñoz and Mounu Prem<br>
-<i>Journal of Development Economics</i>, 151:102669, 2021.
-<a href="http://fagonza4.github.io/mayors_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/bgroups.pdf">Privatization and business groups: Evidence from the Chicago Boys in Chile</a><br>
+        <span class="meta">with Felipe Aldunate, Mounu Prem, and Francisco Urzúa.<br><i>Explorations in Economic History</i>, 78:101355, 2020.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/bgroups_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/allende.pdf">
-Collective action and policy implementation: Evidence from Salvador Allende's expropriations</a><br>
-with Felipe Vial<br>
-<i>Journal of Economic History</i>, 81(2):405-440, 2021.
-<a href="http://fagonza4.github.io/allende_app.pdf">Online appendix</a><br>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/protests.pdf">Collective action in networks: Evidence from the Chilean student movement</a><br>
+        <span class="meta">with myself.<br><i>Journal of Public Economics</i>, 188:104220, 2020.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/protests_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/distortions.pdf">
-Distorted quality signals in school markets</a><br>
-with José Ignacio Cuesta and Cristián Larroulet Philippi<br>
-<i>Journal of Development Economics</i>, 147:102532, 2020.
-<a href="http://fagonza4.github.io/distortions_app.pdf">Online appendix</a><br>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/losing.pdf">Losing your dictator: Firms during political transition</a><br>
+        <span class="meta">with Mounu Prem.<br><i>Journal of Economic Growth</i>, 25(2):227–257, 2020.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/losing_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/bgroups.pdf">
-Privatization and business groups: Evidence from the Chicago Boys in Chile</a><br>
-with Felipe Aldunate, Mounu Prem, and Francisco Urzúa<br>
-<i>Explorations in Economic History</i>, 78:101355, 2020.
-<a href="http://fagonza4.github.io/bgroups_app.pdf">Online appendix</a><br>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/privatizations.pdf">The privatization origins of political corporations</a><br>
+        <span class="meta">with Mounu Prem and Francisco Urzúa.<br><i>Journal of Economic History</i>, 80(2):417–456, 2020 (Arthur H. Cole prize).</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/privatization_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/protests.pdf">
-Collective action in networks: Evidence from the Chilean student movement</a><br>
-with myself<br>
-<i>Journal of Public Economics</i>, 188:104220, 2020.
-<a href="http://fagonza4.github.io/protests_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/mexico.pdf">Non-economic factors in violence</a><br>
+        <span class="meta">with Ceren Baysan et al.<br><i>Journal of Economic Behavior & Organization</i>, 168:434–452, 2019.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/mexico_app.pdf">Online appendix</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/losing.pdf">
-Losing your dictator: Firms during political transition</a><br>
-with Mounu Prem<br>
-<i>Journal of Economic Growth</i>, 25(2):227-257, 2020. 
-<a href="http://fagonza4.github.io/losing_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="http://fagonza4.github.io/gp_18_jce.pdf">Can television bring down a dictator?</a><br>
+        <span class="meta">with Mounu Prem.<br><i>Journal of Comparative Economics</i>, 46(1):349–361, 2018.</span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/privatizations.pdf">
-The privatization origins of political corporations: Evidence from the Pinochet regime</a><br>
-with Mounu Prem and Francisco Urzúa<br>
-<i>Journal of Economic History</i>, 80(2):417-456, 2020 (Arthur H. Cole prize).
-<a href="http://fagonza4.github.io/privatization_app.pdf">Online appendix</a><br>
-</li>
+      <li>
+        <a href="http://fagonza4.github.io/gp_18_jebo.pdf">The value of political capital</a><br>
+        <span class="meta">with Mounu Prem.<br><i>Journal of Economic Behavior & Organization</i>, 155:217–230, 2018.</span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/mexico.pdf">
-Non-economic factors in violence: Evidence from organized crime, suicides and climate in Mexico</a><br>
-with Ceren Baysan, Marshall Burke, Edward Miguel, and Solomon Hsiang<br>
-<i>Journal of Economic Behavior & Organization</i>, 168:434-452, 2019. 
-<a href="http://fagonza4.github.io/mexico_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="http://fagonza4.github.io/maryland.pdf">Start-up nation? Slave wealth and entrepreneurship</a><br>
+        <span class="meta">with Guillermo Marshall and Suresh Naidu.<br><i>Journal of Economic History</i>, 77(2):373–405, 2017.</span>
+      </li>
 
-<li><a href="http://fagonza4.github.io/gp_18_jce.pdf">
-Can television bring down a dictator? Evidence from Chile's NO campaign</a><br>
-with Mounu Prem<br>
-<i>Journal of Comparative Economics</i>, 46(1):349-361, 2018. 
-<a href="http://fagonza4.github.io/gp_18_jce_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="http://fagonza4.github.io/gonzalez_miguel_2015.pdf">War and collective action in Sierra Leone</a><br>
+        <span class="meta">with Edward Miguel.<br><i>Journal of Public Economics</i>, 128:30–33, 2015.</span>
+      </li>
 
-<li><a href="http://fagonza4.github.io/gp_18_jebo.pdf">
-The value of political capital: Dictatorship collaborators as business elites</a><br>
-with Mounu Prem<br>
-<i>Journal of Economic Behavior & Organization</i>, 155:217-230, 2018.
-<a href="http://fagonza4.github.io/gp_18_jebo_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/railroads.pdf">Railroads, specialization, and population growth</a><br>
+        <span class="meta">with Andres Forero et al.<br><i>Journal of Population Economics</i>, 34:1027–1072.</span>
+      </li>
 
-<li><a href="http://fagonza4.github.io/maryland.pdf">
-Start-up nation? Slave wealth and entrepreneurship in civil war Maryland</a><br>
-with Guillermo Marshall and Suresh Naidu<br>
-<i>Journal of Economic History</i>, 77(2):373-405, 2017.
-<a href="http://fagonza4.github.io/maryland_app.pdf">Online appendix</a>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/europeans.pdf">Immigration and human capital</a><br>
+        <span class="meta">with myself.<br><i>Cliometrica</i>, 14(3):443–477.</span>
+      </li>
 
-<li><a href="http://fagonza4.github.io/gonzalez_miguel_2015.pdf">
-War and collective action in Sierra Leone: A comment on the use of coefficient stability</a><br>
-with Edward Miguel<br>
-<i>Journal of Public Economics</i>, 128:30-33, 2015.
-</li>
+      <li>
+        <a href="http://fagonza4.github.io/gonzalez_2013.pdf">Can land reform avoid a left turn?</a><br>
+        <span class="meta">with myself.<br><i>The B.E. Journal of Economic Analysis & Policy</i>, 13(1):31–72.</span>
+      </li>
+    </ol>
 
-<li><a href="https://fagonza4.github.io/railroads.pdf">
-Railroads, specialization, and population growth: Evidence from the first globalization</a><br>
-with Andres Forero, Francisco Gallego, and Matias Tapia<br>
-<i>Journal of Population Economics</i>, 34:1027-1072. (Pre-doctoral work)
-</li>
+    <h2>Working Papers</h2>
+    <ol>
+      <li>
+        <a href="https://fagonza4.github.io/milk.pdf">Transfers and political support in times of economic crisis</a><br>
+        <span class="meta">with Mounu Prem. July 2025.</span>
+        <span class="small-links"><a href="https://docs.iza.org/dp17661.pdf">IZA Discussion Paper</a></span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/europeans.pdf">
-Immigration and human capital: Consequences of a 19th century settlement policy</a><br>
-with myself<br>
-<i>Cliometrica</i>, 14(3):443-477. (Pre-doctoral work)
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/vaccines.pdf">The political consequences of vaccines</a><br>
+        <span class="meta">with Emilio Depetris-Chauvin.</span>
+        <span class="small-links"><a href="http://fagonza4.github.io/vaccines_pap.pdf">Pre-analysis plan</a></span><br>
+        <span class="meta">Revise and resubmit, <i>Journal of Development Economics</i></span>
+      </li>
 
-<li><a href="http://fagonza4.github.io/gonzalez_2013.pdf">
-Can land reform avoid a left turn? Evidence from Chile after the Cuban Revolution</a><br>
-with myself<br>
-<i>The B.E. Journal of Economic Analysis & Policy</i>, 13(1):31-72. (Pre-doctoral work)
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/up.pdf">When the state takes over</a><br>
+        <span class="meta">with Mounu Prem. January 2026.</span>
+      </li>
+    </ol>
 
-</ol>
+    <h2>Book and Chapters</h2>
+    <ol>
+      <li>
+        <a href="https://link.springer.com/book/10.1007/978-3-031-78825-3">The Pinochet Shock</a><br>
+        <span class="meta"><i>Palgrave Macmillan</i>, 2025. Edited with Mounu Prem.</span>
+      </li>
 
+      <li>
+        <a href="https://fagonza4.github.io/cuba.pdf">An interdisciplinary view of Cuba</a><br>
+        <span class="meta">with Mounu Prem and Andrea Tesei.<br>In: <i>Roots of Underdevelopment II</i>, forthcoming.</span>
+      </li>
 
-<!-- Working papers -->
-<h2>Working Papers</h2>
-<ol>
+      <li>
+        <a href="https://fagonza4.github.io/chapter_priv.pdf">The privatization of firms</a><br>
+        <span class="meta">with Mounu Prem.<br>In: <i>The Pinochet Shock</i>, 2025.</span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/milk.pdf">
-Transfers and political support in times of economic crisis</a><br>
-with Mounu Prem. July 2025. <a href="https://docs.iza.org/dp17661.pdf">IZA Discussion Paper</a><br>
-</li>
-        
-<li><a href="https://fagonza4.github.io/vaccines.pdf">
-The political consequences of vaccines: Quasi-experimental evidence from eligibility rules</a><br>
-with Emilio Depetris-Chauvin. <a href="http://fagonza4.github.io/vaccines_pap.pdf">Pre-analysis plan</a><br>
-revise and resubmit, <i>Journal of Development Economics</i>
-</li>
+      <li>
+        <a href="https://fagonza4.github.io/legacy.pdf">The legacy of the Pinochet regime in Chile</a><br>
+        <span class="meta">with Mounu Prem.<br>In: <i>Roots of Underdevelopment I</i>, 2023.</span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/up.pdf">
-When the state takes over: Nationalization, firm performance, and political backlash</a><br>
-with Mounu Prem. January 2026.
-</li>
+      <li>
+        <a href="http://fagonza4.github.io/trade.pdf">Local impacts of trade liberalization</a><br>
+        <span class="meta">with José Ignacio Cuesta and Francisco Gallego.<br><i>Economic Policy in Emerging-Market Economies</i>, 2015.</span>
+      </li>
+    </ol>
 
-</ol>
-	
+    <h2>Interdisciplinary and Policy Articles</h2>
+    <ol>
+      <li>
+        <a href="http://fagonza4.github.io/qaly.pdf">The impacts of COVID-19 restrictions on QALYs</a><br>
+        <span class="meta">with Raimundo Atal et al.<br><i>PLoS ONE</i>, 19(3), 2024.</span>
+      </li>
 
-<!-- Book Chapters -->
-<h2>Book and Chapters</h2>
-<ol>
+      <li>
+        <a href="https://www.historytoday.com/archive/history-matters/pinochets-shadow-privatisation-chile">Pinochet's shadow</a><br>
+        <span class="meta">with myself.<br><i>History Today</i>, 73(9), 2023.</span>
+      </li>
 
-<li><a href="https://link.springer.com/book/10.1007/978-3-031-78825-3">
-The Pinochet Shock: Radical Change and Life Under Dictatorship</a><br>
-<i>Palgrave Macmillan</i>, 2025. Edited with Mounu Prem.
-</li>
-	
-<li><a href="https://fagonza4.github.io/cuba.pdf">
-An interdisciplinary view of Cuba</a><br>
-with Mounu Prem and Andrea Tesei<br>
-In: <i>Roots of Underdevelopment II</i>, Edited by Felipe Valencia Caicedo, Palgrave Macmillan, forthcoming.<br>
-</li>
+      <li>
+        <a href="https://www.nature.com/articles/s41558-020-0792-2.epdf">Reply to: Temporal displacement</a><br>
+        <span class="meta">with Marshall Burke et al.<br><i>Nature Climate Change</i>, 10:499–501, 2020.</span>
+      </li>
 
-<li><a href="https://fagonza4.github.io/chapter_priv.pdf">
-The privatization of firms</a><br>
-with Mounu Prem<br>
-In: <i>The Pinochet Shock</i>, Edited with Mounu Prem, Palgrave Macmillan UK, 2025.<br>
-</li>
-	
-<li><a href="https://fagonza4.github.io/legacy.pdf">
-The legacy of the Pinochet regime in Chile</a><br>
-with Mounu Prem<br>
-In: <i>Roots of Underdevelopment I</i>, Edited by Felipe Valencia Caicedo, Palgrave Macmillan, 2023<br>
-</li>
+      <li>
+        <a href="https://www.estudiospublicos.cl/index.php/cep/article/view/21">¿Candidatas o espectadoras?</a><br>
+        <span class="meta">with Joaquín Galeno and Francisco Gallego.<br><i>Estudios Públicos</i>, 154, 2019.</span>
+      </li>
 
-<li><a href="http://fagonza4.github.io/trade.pdf">
-Local impacts of trade liberalization: Evidence from the Chilean agricultural sector</a><br>
-with José Ignacio Cuesta and Francisco Gallego<br>
-<i>In: Economic Policy in Emerging-Market Economies</i>, Edited by Ricardo Caballero and Klaus Schmidt-Hebbel, Central Bank of Chile, 2015.
-</li>
+      <li>
+        <a href="http://web.stanford.edu/~mburke/papers/BurkeEtAl_NCC_2018.pdf">Higher temperatures increase suicide rates</a><br>
+        <span class="meta">with Marshall Burke et al.<br><i>Nature Climate Change</i>, 8(8), 2018.</span>
+      </li>
 
-</ol>
+      <li>
+        <a href="https://www.estudiospublicos.cl/index.php/cep/article/view/72">Políticas de inclusión universitaria</a><br>
+        <span class="meta">with Esperanza Johnson.<br><i>Estudios Públicos</i>, 149, 2018.</span>
+      </li>
 
+      <li>
+        <a href="https://www.estudiospublicos.cl/index.php/cep/article/view/109">La reforma agraria Chilena</a><br>
+        <span class="meta">with José Ignacio Cuesta et al.<br><i>Estudios Públicos</i>, 146, 2017.</span>
+      </li>
 
+      <li>
+        <a href="http://fagonza4.github.io/gonzalez_2015.pdf">Drug trafficking organizations and local economic activity</a><br>
+        <span class="meta">with myself.<br><i>PLoS ONE</i>, 10(9), 2015.</span>
+      </li>
+    </ol>
 
-<!-- Publications -->
-<h2>Interdisciplinary and Policy Articles</h2>
-<ol>
-
-<li><a href="http://fagonza4.github.io/qaly.pdf">
-The impacts of COVID-19 restrictions on Quality Adjusted Life Years</a><br>
-with Raimundo Atal, Paula Bedregal, José A. Carrasco, Rodrigo Harrison, and Cecilia Vizcaya<br>
-<i>PLoS ONE</i>, 19(3), 2024.
-	
-<li><a href="https://www.historytoday.com/archive/history-matters/pinochets-shadow-privatisation-chile">
-Pinochet's shadow: Privatisation in Chile</a><br>
-with myself<br>
-<i>History Today</i>, 73(9), September 2023.
-	
-<li><a href="https://www.nature.com/articles/s41558-020-0792-2.epdf?sharing_token=0jD1JVoPl_7PZVgyUP74aNRgN0jAjWel9jnR3ZoTv0NEKVNoLOaLnn7fOjqRFq6Ji_BTSafl_-HrlVWUiE75uV0Ff9kc-ZK36llJ35pH6NM7OdBr3Ufc8aDRTgsD5CxJwZP5g19DfXFIRAgyfv2G712uxwREei87BGfGcUNLSFg%3D">
-Reply to: Temporal displacement, adaptation and the effect of climate on suicide rates</a><br>
-with Marshall Burke et al.<br>
-<i>Nature Climate Change</i>, 10:499-501, 2020.
-
-<li><a href="https://www.estudiospublicos.cl/index.php/cep/article/view/21">
-¿Candidatas o espectadoras? Un análisis del impacto de la ley de cuotas</a><br>
-with Joaquín Galeno and Francisco Gallego<br>
-<i>Estudios Públicos</i>, 154:7-41, 2019.
-</li>
-
-<li><a href="http://web.stanford.edu/~mburke/papers/BurkeEtAl_NCC_2018.pdf">
-Higher temperatures increase suicide rates in the U.S. and Mexico</a><br>
-with Marshall Burke et al.<br>
-<i>Nature Climate Change</i>, 8(8):723-729, 2018.
-</li>
-
-<li><a href="https://www.estudiospublicos.cl/index.php/cep/article/view/72">
-Políticas de inclusión universitaria y comportamiento estratégico en educación secundaria</a><br>
-with Esperanza Johnson<br>
-<i>Estudios Públicos</i>, 149:41-73, 2018.
-	
-<li><a href="https://www.estudiospublicos.cl/index.php/cep/article/view/109">
-La reforma agraria Chilena</a><br>
-with José Ignacio Cuesta, José Díaz, Francisco Gallego, and Guillermo Marshall<br>
-<i>Estudios Públicos</i>, 146:7-48, 2017.
-</li>
-
-<li><a href="http://fagonza4.github.io/gonzalez_2015.pdf">
-Drug trafficking organizations and local economic activity in Mexico</a><br>
-with myself<br>
-<i>PLoS ONE</i>, 10(9), 2015.
-</li>
-
-</ol>
-
-
-
-
-</div>
-
-
-
-</div>
-
-
+  </section>
+</main>
 </body>
 </html>
