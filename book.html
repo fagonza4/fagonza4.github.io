@@ -17,7 +17,6 @@
       --link:#0f766e;
       --link-hover:#115e59;
       --chip:#f3f4f6;
-      --bg-soft:#f9fafb;
       --max:980px;
     }
 
@@ -27,7 +26,7 @@
       margin:0;
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
-      line-height:1.6;
+      line-height:1.55;
       background:#fff;
     }
 
@@ -35,6 +34,226 @@
       max-width:var(--max);
       margin:0 auto;
       padding:28px 18px 60px;
+      display:grid;
+      grid-template-columns:240px 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .sidebar{
+      position:sticky;
+      top:18px;
+    }
+
+    .profile-photo{
+      width:100%;
+      border-radius:12px;
+      display:block;
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:34px;
+      letter-spacing:-0.02em;
+      line-height:1.15;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .chip{
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--chip);
+      text-decoration:none;
+      font-size:14px;
+      font-weight:500;
+      color:var(--text);
+    }
+
+    .chip:hover{
+      background:#eef2f7;
+    }
+
+    a{
+      color:var(--link);
+      text-decoration:none;
+    }
+
+    a:hover{
+      color:var(--link-hover);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    h2{
+      font-size:18px;
+      margin:28px 0 10px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+    }
+
+    p{
+      margin:0 0 12px;
+    }
+
+    .meta{
+      color:var(--muted);
+    }
+
+    .chapter-list{
+      margin:0;
+      padding-left:20px;
+    }
+
+    .chapter-list li{
+      margin:14px 0;
+    }
+
+    .chapter-title{
+      font-weight:600;
+    }
+
+    .chapter-authors{
+      color:var(--muted);
+    }
+
+    @media(max-width:780px){
+      .page{grid-template-columns:1fr}
+      .sidebar{position:static}
+      .profile-photo{max-width:220px;margin:0 auto 14px}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+
+<body>
+<main class="page">
+
+  <aside class="sidebar">
+    <img class="profile-photo"
+         src="book-cover.jpg"
+         alt="Cover of The Pinochet Shock">
+  </aside>
+
+  <section>
+    <h1>The Pinochet Shock</h1>
+    <p class="subtitle">
+      Radical Economic Change and Life Under Dictatorship in Chile<br>
+      Edited by Felipe González and Mounu Prem
+    </p>
+
+    <div class="links">
+      <a class="chip" href="index.html">home</a>
+      <a class="chip" href="https://fagonza4.github.io/CV.pdf">cv</a>
+      <a class="chip" href="https://scholar.google.com/citations?user=dwxwyqwAAAAJ">gscholar</a>
+      <a class="chip" href="book.html">book</a>
+    </div>
+
+    <p>
+      <a href="https://link.springer.com/book/10.1007/978-3-031-78825-3">Publisher page</a>
+    </p>
+
+    <p class="meta">
+      Palgrave Macmillan, 2025
+    </p>
+
+    <p>
+      This edited volume examines the economic, political, and social transformation of Chile under the Pinochet dictatorship from a multidisciplinary perspective. :contentReference[oaicite:1]{index=1}
+    </p>
+
+    <h2>Chapters</h2>
+    <ol class="chapter-list">
+      <li>
+        <span class="chapter-title">Introduction</span><br>
+        <span class="chapter-authors">Felipe González, Mounu Prem</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">Political Effects of State-Led Repression</span><br>
+        <span class="chapter-authors">María Angélica Bautista</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">The Contraction of Higher Education in the Early Years of the Pinochet Regime</span><br>
+        <span class="chapter-authors">Luis Martínez</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">The Legal Pedagogy of Neoliberalism: The Rise (and Resilience) of a Post-democratic Constitutional Culture</span><br>
+        <span class="chapter-authors">Rodrigo Cordero, Ricardo Valenzuela</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">Local Governments and Regime Change</span><br>
+        <span class="chapter-authors">Pablo Muñoz</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">The Lasting Impact in Female Representation of the Pinochet Dictatorship</span><br>
+        <span class="chapter-authors">Antonia Paredes-Haz</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">The International Dimensions of the Pinochet Dictatorship</span><br>
+        <span class="chapter-authors">Molly Avery</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">The Political Legacy of Politician Trajectories During the Pinochet Regime</span><br>
+        <span class="chapter-authors">Jane Esberg, Adriane Fresh</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">The Privatization of Firms</span><br>
+        <span class="chapter-authors">Felipe González, Mounu Prem</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">The Evolution of Business Groups During the Pinochet Regime</span><br>
+        <span class="chapter-authors">Felipe Aldunate</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">Working Families Under Dictatorship: A Social and Labour History of Authoritarian Capitalism (1973–1990)</span><br>
+        <span class="chapter-authors">Ángela Vergara</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">Por la Razón o La Fuerza: What Caused Chile’s Economic Miracle?</span><br>
+        <span class="chapter-authors">Enrique Escalante</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">Public Housing Policies During the Pinochet Dictatorship</span><br>
+        <span class="chapter-authors">Fernanda Rojas-Ampuero</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">Indigenous Property and Economic Development Under the Pinochet Dictatorship</span><br>
+        <span class="chapter-authors">Dany Jaimovich, Felipe Jordán</span>
+      </li>
+
+      <li>
+        <span class="chapter-title">Censorship and Cultural Control</span><br>
+        <span class="chapter-authors">Jane Esberg</span>
+      </li>
+    </ol>
+  </section>
+
+</main>
+</body>
+</html>      padding:28px 18px 60px;
     }
 
     h1{
